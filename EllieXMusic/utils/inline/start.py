@@ -31,7 +31,7 @@ def private_panel(_):
         ],
         [
             InlineKeyboardButton(text=_["S_B_5"], user_id=config.OWNER_ID),
-            InlineKeyboardButton(text=_["S_B_7"], url=f"https://te.legra.ph/file/cfb20cd24dc6c2448b7d2.jpg",
+            InlineKeyboardButton(text=_["S_B_7"], url=f"https://te.legra.ph/file/cfb20cd24dc6c2448b7d2.jpg"), 
         ],
     ]
     return buttons
