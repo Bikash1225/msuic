@@ -117,11 +117,7 @@ async def stream(
             return
         else:
             link = await ALPHABin(msg)
-            lines = msg.count("\n")
-            if lines >= 17:
-                car = os.linesep.join(msg.split(os.linesep)[:17])
-            else:
-                car = msg
+            car = msg
             carbon = await Carbon.generate(car, randint(100, 10000000))
             upl = close_markup(_)
             return await app.send_photo(
@@ -130,6 +126,8 @@ async def stream(
                 caption=_["play_21"].format(position, link),
                 reply_markup=upl,
             )
+    # Rest of the code remains unchanged...
+
     elif streamtype == "youtube":
         link = result["link"]
         vidid = result["vidid"]
